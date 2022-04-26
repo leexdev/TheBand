@@ -12,7 +12,7 @@
 <body>
     <div id="main">
         <div id="heading">
-            <ul id="nav">
+            <label for=""><ul id="nav"></label>
                 <li><a href="#">Home</a></li>
                 <li><a href="#band">Band</a></li>
                 <li><a href="#tour">Tour</a></li>
@@ -28,7 +28,20 @@
                     </ul>
                 </li>
             </ul>
-            <i class="ti-search-heading ti-search"></i>
+            <label for="nav-mobile-input" class="ti-menu nav__menu-mobile" ></label>
+
+            <input type="checkbox" hidden class="nav__input" name="" id="nav-mobile-input" >
+            <label for="nav-mobile-input" class="nav__input"></label>
+            <label for="nav-mobile-input" class="nav__overlay"></label>
+            <div class="nav__mobile">
+                <label for=""><ul class="nav__mobile-list"></label>
+                    <label for="nav-mobile-input"><li><a href="#">Home</a></li></label>
+                    <li><a href="#band">Band</a></li>
+                    <li><a href="#tour">Tour</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="ti-search-heading ti-search"></i>
+            </div>
         </div>
 
         <div id="slider">

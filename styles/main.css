@@ -104,6 +104,69 @@ html {
     z-index: 1;
 }
 
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 170px;
+    background-color: black;
+    transform: translateX(-100%);
+    animation: fadeIn linear 0.2s;
+}
+
+.nav__mobile-list li a {
+    display: block;
+}
+
+.nav__mobile-list a:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+.nav__mobile-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 12px 24px;
+}
+
+.nav__menu-mobile {
+    color: white;
+    width: 28px;
+    height: 28px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin-top: 8px;
+    margin-right: 8px;
+    font-size: 1.6em;
+    display: none;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+
+.nav__input:checked ~ .nav__overlay {
+    display: block;
+}
+
+.nav__input:checked ~ .nav__mobile {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
 #nav {
     display: inline-block;
 }
@@ -164,6 +227,18 @@ html {
 .ti-search-heading:hover {
     background-color: red;
     cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+    #nav {
+        display: none;
+    }
+    .nav__menu-mobile {
+        display: block;
+    }
+    .ti-search-heading {
+        display: none;
+    }
 }
 
 #slider {
@@ -468,5 +543,14 @@ html {
     to{
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
