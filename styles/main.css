@@ -135,7 +135,7 @@ html {
 #nav > li:hover > a {
     width: 100%;
     background-color: #ccc;
-    color: black;
+    color: black !important;
 }
 
 #nav .subnav {
