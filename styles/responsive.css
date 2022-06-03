@@ -65,6 +65,15 @@
         margin-top: 16px;
     }
 
+    .contact-form {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 15px 17px;
+    }
+
 }
 
 @media (min-width: 601px) {
